@@ -1,0 +1,25 @@
+<div class="card">
+  <div class="card-body">
+    <h6 class="text-center">List Of Product</h6>
+    <table class="table table-sm table-hover">
+      <tbody>
+        <tr *ngFor="let employee of employeesList  let i = index">
+           
+           <td>{{employee.name}}</td> 
+           <td>{{employee.position}}</td> 
+           <td>{{employee.email}}</td> 
+           <td>{{employee.salary}}</td> 
+           <td>
+             <a class="btn btn-secondary text-white" (click)="onEdit(employee,i)">
+               <i class="far fa-edit"></i>
+             </a>
+             <a class="btn btn-danger text-white" (click)="onDelete(i)">
+              <i class="far fa-trash-alt"></i>
+            </a>
+           </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
